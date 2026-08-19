@@ -7,7 +7,7 @@
   <title>Your.Psych.Person | Saranya Iyer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="sheet">
   <style>
 :root {
   --cream: #f8f4e9;
@@ -487,6 +487,52 @@ p { color:var(--muted); }
   .reference-message h2 { font-size: 32px; }
   .reference-message p { font-size: 17px; }
 }
+ @media (max-width: 768px) {
+  /* Layout & Container Reset */
+  .container { width: calc(100% - 32px); }
+  .section { padding: 60px 0; }
+  
+  /* Mobile Navigation Menu */
+  .menu-toggle { display: block; cursor: pointer; }
+  .nav-links {
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    top: 72px;
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    background: var(--white);
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+  }
+  .nav-links.open { display: flex; }
+
+  /* Hero Section Stacking */
+  .reference-hero-inner { width: 100%; min-height: auto; padding-bottom: 30px; }
+  .reference-top { grid-template-columns: 1fr; padding: 24px 16px; text-align: center; }
+  .reference-brand-lockup { flex-direction: column; gap: 12px; }
+  .reference-main-grid { grid-template-columns: 1fr; padding: 16px; gap: 24px; }
+  .reference-profile { grid-template-columns: 1fr; justify-items: center; text-align: center; }
+  
+  /* Responsive Profile Image */
+  .reference-photo { width: min(280px, 80vw); height: 380px; }
+  
+  /* Message & Content Stacking */
+  .reference-message { border-left: none; border-top: 2px solid var(--gold); padding: 20px 0 0; text-align: center; }
+  .reference-message h2 { font-size: 28px; }
+  .reference-message p { font-size: 16px; }
+
+  /* Feature Grids */
+  .two-column, .approach-grid, .therapy-grid, .principles, .booking-features, .booking-box {
+    grid-template-columns: 1fr !important;
+    gap: 24px;
+  }
+  
+  /* Hide heavy decorative elements on mobile to prevent overflow */
+  .reference-leaves, .reference-soft-shape { display: none; }
+} 
 </style>
 </head>
 
@@ -835,7 +881,7 @@ const observer = new IntersectionObserver(
 );
 
 document.querySelectorAll(".reveal").forEach((element, index) => {
-  element.style.transitionDelay = `${Math.min(index % 6, 5) * 70}ms`;
+  element..transitionDelay = `${Math.min(index % 6, 5) * 70}ms`;
   observer.observe(element);
 });
 
@@ -845,13 +891,13 @@ const modal = document.getElementById("bookingModal");
 function openModal() {
   modal.classList.add("open");
   modal.setAttribute("aria-hidden", "false");
-  document.body.style.overflow = "hidden";
+  document.body..overflow = "hidden";
 }
 
 function closeModal() {
   modal.classList.remove("open");
   modal.setAttribute("aria-hidden", "true");
-  document.body.style.overflow = "";
+  document.body..overflow = "";
 }
 
 document.querySelectorAll("[data-booking]").forEach(button => {
