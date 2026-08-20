@@ -308,7 +308,7 @@ p { color:var(--muted); }
   align-items: center;
   gap: 25px;
 }
-.reference-brain { width: 105px; height: 105px; flex: 0 0 auto; display: flex; align-items: center; }
+.reference-brain { width: 155px; height: 155px; flex: 0 0 auto; }
 .reference-brain img { width: 100%; height: 100%; object-fit: contain; }
 .reference-brand {
   font-family: var(--script);
@@ -580,17 +580,19 @@ p { color:var(--muted); }
   <div class="reference-soft-shape shape-right"></div>
 
 <div class="reference-hero-inner">
-      <div class="reference-brand-lockup" style="display: flex; align-items: center; justify-content: center; gap: 20px; margin-bottom: 24px;">
-        <div class="reference-brain" style="width: 105px; height: 105px; flex-shrink: 0;">
-          <img src="brain.png" alt="Your Psych Person Logo" style="width: 100%; height: 100%; object-fit: contain;">
-        </div>
-        <div>
-          <div class="reference-brand" style="font-family: var(--script); color: #3f624a; font-size: clamp(36px, 4vw, 56px); line-height: 1;">Your.Psych.Person</div>
-          <div class="reference-tagline" style="font-size: 16px; color: #555; margin-top: 4px;">Understand. Accept. Heal.</div>
+      <div class="reference-top">
+        <div class="reference-brand-lockup">
+          <div class="reference-brain">
+            <img src="brain.png" alt="Your Psych Person Logo" style="width: 100%; height: 100%; object-fit: contain;">
+          </div>
+          <div>
+            <div class="reference-brand">Your.Psych.Person</div>
+            <div class="reference-tagline">Understand. Accept. Heal.</div>
+          </div>
         </div>
       </div>
 
-      <div class="reference-psych-symbol" aria-hidden="true" style="text-align: center; margin-bottom: 30px;">Ψ</div>
+      <div class="reference-psych-symbol" aria-hidden="true">Ψ</div>
 
       <div class="reference-main-grid">
         <div class="reference-profile">
@@ -608,6 +610,10 @@ p { color:var(--muted); }
           <p>We explore your concerns and understand what works for you. You bring your lived experiences and goals; together, we build practical ways to navigate challenges and create meaningful, lasting change.</p>
           <a href="#booking" class="btn btn-primary" style="margin-top: 24px; display: inline-flex;">
             <span>░</span> Work with me <span>→</span>
+          </a>
+        </div>
+      </div>
+    </div>
           </a>
         </div>
       </div>
