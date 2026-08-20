@@ -490,36 +490,86 @@ p { color:var(--muted); }
 
 </style>
 
-<style id="final-polish">
-/* Final visual polish — existing typography intentionally preserved */
-.reference-hero-inner {
-  border-radius: 0 0 28px 28px;
-  box-shadow: 0 20px 55px rgba(64, 93, 67, .07);
-}
-.reference-photo {
-  width: 350px;
-  height: 485px;
-  border-radius: 18px 18px 22px 22px;
-  box-shadow: 0 18px 40px rgba(48, 67, 51, .13);
-  background: #e4ead6;
-}
-.reference-photo img {
-  image-rendering: auto;
-  filter: contrast(1.02) saturate(1.02);
-}
-.reference-name-block { padding-top: 34px; }
-.reference-name-block h1 { letter-spacing: -.02em; }
-.reference-message { padding-left: 46px; }
-.reference-message h2 { max-width: 560px; }
-.reference-message p { max-width: 610px; }
-.reference-work-button { transition: transform .2s ease, box-shadow .2s ease; }
-.reference-work-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 22px rgba(64, 93, 67, .12);
-}
-.therapy-card, .quote-card, .booking-box {
-  box-shadow: 0 14px 36px rgba(48, 67, 51, .07);
-}
+/* FULL LOCKUP ABOVE PHOTO */
+  .reference-top {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin-bottom: 20px !important;
+  }
+
+  .reference-brand-lockup {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 16px !important;
+  }
+
+  /* Single brain icon inside lockup */
+  .reference-brand-lockup .reference-brain {
+    width: 65px !important;
+    height: 65px !important;
+    display: block !important;
+  }
+
+  /* Hide stray brain elements in grid */
+  .reference-main-grid > .reference-brain,
+  .hero-reference > .reference-brain {
+    display: none !important;
+  }
+
+  /* Sacramento Title */
+  .reference-brand {
+    font-family: 'Sacramento', cursive, serif !important;
+    color: #3f624a !important;
+    font-size: clamp(38px, 5vw, 68px) !important;
+    line-height: 1 !important;
+  }
+
+  .reference-tagline {
+    font-size: 13px !important;
+    letter-spacing: 0.18em !important;
+    text-transform: uppercase !important;
+    color: #526658 !important;
+    margin-top: 4px !important;
+  }
+
+  /* PHOTO & GRID STYLING */
+  .reference-photo {
+    width: 100% !important;
+    max-width: 350px !important;
+    height: auto !important;
+    border-radius: 18px 18px 22px 22px !important;
+    box-shadow: 0 18px 40px rgba(48, 67, 51, .13) !important;
+  }
+
+  /* MOBILE ADJUSTMENTS */
+  @media (max-width: 800px) {
+    .reference-brand-lockup {
+      flex-direction: column !important;
+      gap: 8px !important;
+      text-align: center !important;
+    }
+
+    .reference-brand-lockup .reference-brain {
+      width: 48px !important;
+      height: 48px !important;
+    }
+
+    .reference-brand {
+      font-size: 36px !important;
+    }
+
+    .reference-tagline {
+      font-size: 10px !important;
+    }
+
+    .reference-photo {
+      max-width: 240px !important;
+    }
+  }
 @media (max-width: 1100px) {
   .reference-profile { grid-template-columns: 300px 1fr; }
   .reference-photo { width: 300px; height: 420px; }
