@@ -296,30 +296,67 @@ p { color:var(--muted); }
   position: relative;
   z-index: 3;
 }
-.reference-brand-lockup {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-}
-.reference-brain { width: 155px; height: 155px; flex: 0 0 auto; }
-.reference-brain svg { width: 100%; height: 100%; }
-.reference-brand {
-  font-family: var(--script);
-  color: #3f624a;
-  font-size: clamp(48px, 4.1vw, 72px);
-  line-height: .9;
-}
-.reference-tagline {
-  font-family: var(--serif);
-  color: #55715a;
-  font-size: clamp(24px, 1.8vw, 32px);
-  margin-top: 17px;
-}
-.reference-psych-symbol {
-  width: 112px; height: 112px; border-radius: 50%;
-  background: #f1ead6; display: grid; place-items: center;
-  color: #a48643; font-family: var(--serif); font-size: 60px;
-  justify-self: center; margin-top: 10px;
+/* Ensure logo and title stay centered above the main section */
+  .reference-brand-lockup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 6px;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  /* Brain graphic directly above brand title */
+  .reference-top .reference-brain {
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Hide any stray floating brain elements in the grid layout */
+  .reference-main-grid .reference-brain,
+  .reference-profile > img.reference-brain {
+    display: none !important;
+  }
+
+  /* Title: Sacramento Cursive */
+  .reference-brand {
+    font-family: 'Sacramento', cursive, serif;
+    color: #3f624a;
+    font-size: clamp(42px, 5.5vw, 72px);
+    line-height: 1.1;
+    display: block;
+    text-align: center;
+  }
+
+  /* Tagline */
+  .reference-tagline {
+    font-size: 14px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #526658;
+    margin-top: 4px;
+    display: block;
+    text-align: center;
+  }
+
+  /* Golden Psychology Circle Symbol */
+  .reference-psych-symbol {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: #f1ead6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #a48643;
+    font-family: var(--serif);
+    font-size: 48px;
+    margin: 16px auto;
+  }
 }
 .reference-main-grid {
   display: grid;
