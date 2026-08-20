@@ -427,33 +427,87 @@ p { color:var(--muted); }
   .reference-main-grid { padding-left: 55px; padding-right: 45px; }
   .reference-profile { grid-template-columns: 260px 1fr; gap: 30px; }
   .reference-photo { width:260px; height:380px; }
-}
 @media (max-width: 800px) {
-  .hero-reference { padding: 40px 0; min-height:auto; }
-  .reference-hero-inner { width:100%; min-height:auto; padding-bottom:45px; }
-  .reference-top {
-    grid-template-columns:1fr; padding:35px 25px 10px; text-align:center;
+  .hero-reference {
+    padding: 20px 12px;
+    min-height: auto;
   }
-.reference-brain { width: 95px; height: 95px; } .reference-brand { font-size: 48px; }
-.reference-tagline { font-size: 16px; margin-top: 8px; }
-  .reference-tagline { font-size: 20px; margin-top: 8px; }
-  .reference-psych-symbol { width:70px; height:70px; font-size:40px; margin:22px auto 0; }
+  .reference-hero-inner {
+    width: 100%;
+    min-height: auto;
+    padding: 16px 12px;
+  }
+  .reference-brand-lockup {
+    flex-direction: row !important;
+    gap: 12px !important;
+    justify-content: center !important;
+  }
+  .reference-brain {
+    width: 55px !important;
+    height: 55px !important;
+  }
+  .reference-brand {
+    font-size: 28px !important;
+    line-height: 1 !important;
+  }
+  .reference-tagline {
+    font-size: 11px !important;
+    letter-spacing: 0.12em !important;
+    margin-top: 4px !important;
+    white-space: normal !important;
+  }
+  .reference-psych-symbol {
+    font-size: 28px !important;
+    margin: 14px auto !important;
+  }
   .reference-main-grid {
-    grid-template-columns:1fr; padding:20px 22px 0; gap:35px;
+    grid-template-columns: 1fr !important;
+    padding: 12px 8px !important;
+    gap: 20px !important;
   }
   .reference-profile {
-    grid-template-columns:1fr; gap:25px; justify-items:center;
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    justify-items: center !important;
+    text-align: center !important;
   }
-  .reference-photo { width:min(300px,80vw); height:390px; }
-  .reference-name-block { padding-top:0; width:100%; }
-  .reference-name-block h1 { font-size:50px; }
-  .reference-name-block p { font-size:18px; }
-  .reference-message { border-left:0; border-top:2px solid #b4872e; padding:30px 0 0; text-align:center; }
-  .reference-message h2 { font-size:35px; }
-  .reference-message p { font-size:16px; }
-  .reference-work-button { font-size:18px; }
-  .reference-leaves-left { left:-130px; top:0; opacity:.55; }
-  .reference-leaves-right { right:-130px; top:0; opacity:.55; }
+  .reference-photo {
+    width: 100% !important;
+    max-width: 260px !important;
+    height: auto !important;
+    aspect-ratio: 4/5;
+  }
+  .reference-name-block {
+    padding-top: 0 !important;
+  }
+  .reference-name-block h1 {
+    font-size: 32px !important;
+  }
+  .reference-name-block p {
+    font-size: 14px !important;
+  }
+  .reference-message {
+    border-left: none !important;
+    border-top: 1px solid #b4872e !important;
+    padding: 16px 4px 0 4px !important;
+    text-align: center !important;
+  }
+  .reference-message h2 {
+    font-size: 22px !important;
+    line-height: 1.3 !important;
+  }
+  .reference-message p {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+  }
+  .btn-work-with-me {
+    margin: 18px auto 0 auto !important;
+  }
+  .reference-leaves-left,
+  .reference-leaves-right {
+    display: none !important;
+  }
+}
 }
 .btn-work-with-me {
   display: inline-flex;
