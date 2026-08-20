@@ -326,11 +326,18 @@ p { color:var(--muted); }
 }
 }
 .reference-psych-symbol {
-  width: 112px;
-  height: 112px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
-  background: #f1ead6;
-  display: grid;
+  background-color: #f1ead6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a48643;
+  font-family: var(--serif);
+  font-size: 48px;
+  margin: 16px auto;
+}
   place-items: center;
   color: #a48643;
   font-family: var(--serif);
@@ -440,8 +447,16 @@ p { color:var(--muted); }
   .reference-profile { grid-template-columns: 260px 1fr; gap: 30px; }
  @media (max-width: 800px) {
   .hero-reference {
-    padding: 16px 8px !important;
-    min-height: auto !important;
+    .reference-psych-symbol {
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 50% !important;
+    background-color: #f1ead6 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 32px !important;
+    margin: 12px auto !important;
   }
 
   .reference-hero-inner {
