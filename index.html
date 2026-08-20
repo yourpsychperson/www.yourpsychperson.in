@@ -453,7 +453,33 @@ p { color:var(--muted); }
   .reference-leaves-left { left:-130px; top:0; opacity:.55; }
   .reference-leaves-right { right:-130px; top:0; opacity:.55; }
 }
+.btn-work-with-me {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 28px;
+  padding: 8px 18px;
+  background-color: #c2d1b9;
+  color: #2d4534;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
 
+.btn-work-with-me:hover {
+  opacity: 0.9;
+}
+
+.btn-work-with-me .icon {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.btn-work-with-me .arrow {
+  margin-left: 4px;
+}
 
 /* Font preservation: keep the original Canva-inspired typography.
    Do not substitute these families in future edits. */
@@ -607,25 +633,9 @@ p { color:var(--muted); }
 
         <div class="reference-message">
           <h2>A safe, non-judgmental space where we work together with you</h2>
-          <p>We explore your concerns and understand what works for you. You bring your lived experiences and goals; together, we build practical ways to navigate challenges and create meaningful, lasting change.</p>
-          <a href="#booking" class="btn btn-primary" style="margin-top: 24px; display: inline-flex;">
-            <span>░</span> Work with me <span>→</span>
-          </a>
-        </div>
-      </div>
-    </div>
-          </a>
-        </div>
-      </div>
-    </div>
-          </a>
-        </div>
-      </div>
-    </div>
-          <a href="#booking" class="btn btn-primary" style="margin-top: 24px; display: inline-flex;">
-            <span>░</span> Work with me <span>→</span>
-          </a>
-        </div>
+       <a href="#booking" class="btn-work-with-me">
+  <span class="icon">▧</span> Work with me <span class="arrow">→</span>
+</a>
       </div>
     </div>
           <article class="therapy-card reveal">
