@@ -26,9 +26,17 @@
   --sans: "DM Sans", Arial, sans-serif;
   --script: "Allura", cursive;
 }
-
-* { box-sizing: border-box; }
+*, ::before, ::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+body {
 body {
   margin: 0;
   color: var(--ink);
@@ -214,45 +222,6 @@ p { color:var(--muted); }
 .reveal { opacity:0; transform:translateY(22px); transition:opacity .7s ease, transform .7s ease; }
 .reveal.visible { opacity:1; transform:none; }
 
-@media (max-width: 1050px) {
-  .nav-links { gap:15px; }
-  .hero-grid { grid-template-columns:1fr 1fr; }
-  .hero-copy { grid-column:1 / -1; border-left:0; border-top:1px solid var(--gold); padding:25px 0 0; }
-  .two-column { gap:50px; }
-  .booking-box { grid-template-columns:1fr 1fr; }
-  .booking-card { grid-column:1 / -1; }
-  .footer-grid { grid-template-columns:1fr 1fr; }
-}
-
-@media (max-width: 760px) {
-  .container { width:min(100% - 30px, 620px); }
-  .section { padding:78px 0; }
-  .navbar { min-height:72px; }
-  .menu-toggle { display:block; }
-  .nav-links {
-    position:absolute; left:15px; right:15px; top:72px; display:none; flex-direction:column;
-    align-items:stretch; gap:3px; background:var(--white); padding:14px; border-radius:0 0 20px 20px;
-    box-shadow:var(--shadow); border:1px solid rgba(64,93,67,.10);
-  }
-  .nav-links.open { display:flex; }
-  .nav-links a { padding:11px 13px !important; }
-  .nav-cta { text-align:center; }
-  .hero { padding-top:55px; }
-  .hero-grid { grid-template-columns:1fr; gap:38px; text-align:center; }
-  .hero-intro { padding-left:0; }
-  .hero-actions { justify-content:center; flex-wrap:wrap; }
-  .hero-photo-wrap { order:2; }
-  .hero-copy { order:3; text-align:left; }
-  .hero-copy .mini-icon { margin-left:0; }
-  .hero-copy h2 { font-size:34px; }
-  .photo-frame { width:min(310px, 85vw); }
-  .two-column, .approach-grid { grid-template-columns:1fr; gap:35px; }
-  .therapy-grid { grid-template-columns:1fr 1fr; }
-  .booking-box { grid-template-columns:1fr; padding:30px 22px; }
-  .booking-card { grid-column:auto; }
-  .footer-grid { grid-template-columns:1fr; gap:30px; }
-  .footer-bottom { flex-direction:column; width:min(100% - 30px, 620px); }
-}
 
 @media (max-width: 500px) {
   h1 { font-size:54px; }
@@ -272,6 +241,44 @@ p { color:var(--muted); }
   background: #fbf2e9;
   position: relative;
   overflow: hidden;
+}@media (max-width: 768px) {
+  .container { width: 100%; padding: 0 16px !important; }
+  .section { padding: 50px 0; }
+  .nav-header { height: 71px; }
+  .menu-toggle { display: block; }
+
+  /* Headings size control for mobile screens */
+  h1, .reference-brand { font-size: clamp(32px, 8vw, 48px) !important; }
+  h2 { font-size: clamp(24px, 6vw, 36px) !important; }
+
+  .nav-links {
+    position: absolute; top: 71px; right: 16px; left: 16px; display: none; flex-direction: column;
+    align-items: stretch; gap: 10px; background: var(--white); padding: 16px; border-radius: 0 0 20px 20px;
+    box-shadow: var(--shadow); border: 1px solid rgba(63,98,74,0.12);
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a { padding: 12px 14px !important; text-align: center; font-size: 16px; }
+  .nav-cta { text-align: center; }
+
+  /* Stack layout grids cleanly on phone screens */
+  .hero-grid,
+  .about-grid,
+  .approach-grid,
+  .therapy-grid,
+  .footer-grid,
+  .reference-main-grid { 
+    grid-template-columns: 1fr !important; 
+    gap: 28px !important; 
+  }
+
+  .hero-grid { text-align: center; }
+  .hero-actions { justify-content: center; flex-wrap: wrap; }
+  .hero-photo-wrap { order: -1; }
+  .hero-copy { order: 2; text-align: left; }
+  .hero-copy .section-heading { margin-left: 0; }
+  .booking-box { grid-template-columns: 1fr; padding: 28px 20px; }
+  .booking-card { grid-column: auto; }
+  .footer-bottom { flex-direction: column; width: calc(100% - 32px); gap: 12px; }
 }
 .reference-hero-inner {
   width: min(1660px, calc(100% - 90px));
