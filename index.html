@@ -490,13 +490,14 @@ p { color:var(--muted); }
 
 </style>
 
-/* FULL LOCKUP ABOVE PHOTO */
+<style id="final-polish">
+  /* DESKTOP LAYOUT */
   .reference-top {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
     width: 100% !important;
-    margin-bottom: 20px !important;
+    margin-bottom: 28px !important;
   }
 
   .reference-brand-lockup {
@@ -507,45 +508,59 @@ p { color:var(--muted); }
     gap: 16px !important;
   }
 
-  /* Single brain icon inside lockup */
-  .reference-brand-lockup .reference-brain {
-    width: 65px !important;
-    height: 65px !important;
+  .reference-brain {
+    width: 55px !important;
+    height: 55px !important;
+    object-fit: contain !important;
     display: block !important;
   }
 
-  /* Hide stray brain elements in grid */
-  .reference-main-grid > .reference-brain,
-  .hero-reference > .reference-brain {
-    display: none !important;
+  .reference-title-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
   }
 
-  /* Sacramento Title */
   .reference-brand {
     font-family: 'Sacramento', cursive, serif !important;
     color: #3f624a !important;
-    font-size: clamp(38px, 5vw, 68px) !important;
+    font-size: 58px !important;
     line-height: 1 !important;
+    white-space: nowrap !important;
   }
 
   .reference-tagline {
-    font-size: 13px !important;
+    font-size: 11px !important;
     letter-spacing: 0.18em !important;
     text-transform: uppercase !important;
     color: #526658 !important;
     margin-top: 4px !important;
+    white-space: nowrap !important;
   }
 
-  /* PHOTO & GRID STYLING */
+  /* PHOTO & GRID FIX */
+  .reference-main-grid {
+    display: grid !important;
+    grid-template-columns: auto 1fr !important;
+    gap: 32px !important;
+    align-items: start !important;
+  }
+
+  .reference-profile {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 20px !important;
+    align-items: center !important;
+  }
+
   .reference-photo {
-    width: 100% !important;
-    max-width: 350px !important;
+    width: 220px !important;
     height: auto !important;
-    border-radius: 18px 18px 22px 22px !important;
-    box-shadow: 0 18px 40px rgba(48, 67, 51, .13) !important;
+    border-radius: 18px !important;
+    box-shadow: 0 14px 30px rgba(48, 67, 51, .12) !important;
   }
 
-  /* MOBILE ADJUSTMENTS */
+  /* MOBILE RESPONSIVE OVERRIDES */
   @media (max-width: 800px) {
     .reference-brand-lockup {
       flex-direction: column !important;
@@ -553,22 +568,35 @@ p { color:var(--muted); }
       text-align: center !important;
     }
 
-    .reference-brand-lockup .reference-brain {
-      width: 48px !important;
-      height: 48px !important;
+    .reference-title-wrapper {
+      align-items: center !important;
     }
 
     .reference-brand {
-      font-size: 36px !important;
+      font-size: 38px !important;
     }
 
     .reference-tagline {
       font-size: 10px !important;
     }
 
+    .reference-main-grid {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+    }
+
+    .reference-profile {
+      flex-direction: column !important;
+      text-align: center !important;
+    }
+
     .reference-photo {
+      width: 100% !important;
       max-width: 240px !important;
     }
+  }
+</style>
   }
 @media (max-width: 1100px) {
   .reference-profile { grid-template-columns: 300px 1fr; }
